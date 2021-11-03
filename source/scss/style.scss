@@ -1,0 +1,55 @@
+$gray: #f3f3f3;
+$blue: #0b64fe;
+$light-blue: #a6ffff;
+$main-black: #181818;
+$black: #000000;
+$white: #ffffff;
+
+.container {
+  width: 1720px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1919px) {
+  .container {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@keyframes portal {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(800px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@import "ergonomics/ergonomics.scss";
+@import "voice-control/voice-control.scss";

@@ -1,0 +1,100 @@
+.ergonomics {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  background-color: $gray;
+  background-size: 100%;
+  height: 1080px;
+  padding: 90px 0 90px 0;
+
+  .container {
+    height: 900px;
+    display: grid;
+    grid-template-columns: 783px 1fr;
+    grid-template-rows: 270px 1fr;
+    gap: 30px 55px;
+  }
+
+  &__title {
+    font-family: inherit;
+    font-size: 62px;
+    font-weight: 300;
+    line-height: 62px;
+    color: $blue;
+    grid-column: -1 / -2;
+    grid-row: 1 / 2;
+    width: 420px;
+    margin-left: 150px;
+    margin-top: 25px;
+  }
+
+  &__text {
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 37.4px;
+    color: $main-black;
+    grid-column: -1 / -2;
+    grid-row: -1/ -2;
+    width: 500px;
+
+    margin-left: 150px;
+
+    &--desktop-hidden {
+      display: none;
+    }
+  }
+
+  &__table {
+    position: relative;
+    height: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1/ -1;
+  }
+}
+
+@media (max-width: 1919px) {
+  .ergonomics {
+    height: 1000px;
+
+    .container {
+      display: block;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    &__title {
+      font-family: "Bebas Neue", "Arial", cursive;
+      font-size: 38px;
+      width: auto;
+      line-height: 38px;
+      font-weight: 700;
+      letter-spacing: -3px;
+      margin-left: 0;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 27.2px;
+      margin-left: 0;
+      width: auto;
+
+      &--desktop-hidden {
+        display: block;
+        margin-bottom:40px;
+      }
+
+      &--mobile-hidden {
+        display: none;
+      }
+    }
+
+    &__table {
+      height: 270px;
+      margin-left:-10px;
+    }
+  }
+}
+
+@import "table/table.scss";
